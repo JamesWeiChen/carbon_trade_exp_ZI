@@ -1,0 +1,105 @@
+=== Outcome: emission_diff | HC3 Robust SE ===
+      Y = emission_diff      (1)       (2)
+              Intercept   -0.104  -0.211**
+                         (0.100)   (0.067)
+   emission_experienced   -0.097          
+                         (0.111)          
+      trade_experienced   -0.197          
+                         (0.125)          
+emission_experience_num              0.014
+                                   (0.018)
+   trade_experience_num             -0.030
+                                   (0.017)
+                      N     2880      2880
+                    AIC  13615.4   13616.5
+                    BIC  13633.3   13634.4
+
+
+=== Outcome: emission_diff | Clustered SE (by participant_code) ===
+      Y = emission_diff      (1)      (2)
+              Intercept   -0.104   -0.211
+                         (0.211)  (0.145)
+   emission_experienced   -0.097         
+                         (0.239)         
+      trade_experienced   -0.197         
+                         (0.331)         
+emission_experience_num             0.014
+                                  (0.036)
+   trade_experience_num            -0.030
+                                  (0.028)
+                      N     2880     2880
+                    AIC  13615.4  13616.5
+                    BIC  13633.3  13634.4
+
+
+=== Outcome: net_profit_diff | HC3 Robust SE ===
+    Y = net_profit_diff        (1)         (2)
+              Intercept     -2.369  -11.415***
+                           (3.098)     (3.005)
+   emission_experienced  -12.791**            
+                           (4.094)            
+      trade_experienced   13.287**            
+                           (4.439)            
+emission_experience_num                  0.356
+                                       (0.544)
+   trade_experience_num               2.419***
+                                       (0.720)
+                      N       2880        2880
+                    AIC    35439.6     35446.6
+                    BIC    35457.5     35464.5
+
+
+=== Outcome: net_profit_diff | Clustered SE (by participant_code) ===
+    Y = net_profit_diff       (1)      (2)
+              Intercept    -2.369  -11.415
+                          (6.832)  (9.972)
+   emission_experienced   -12.791         
+                         (11.863)         
+      trade_experienced    13.287         
+                         (11.474)         
+emission_experience_num              0.356
+                                   (1.525)
+   trade_experience_num              2.419
+                                   (1.509)
+                      N      2880     2880
+                    AIC   35439.6  35446.6
+                    BIC   35457.5  35464.5
+
+
+=== Outcome: production_diff | HC3 Robust SE ===
+    Y = production_diff       (1)        (2)
+              Intercept  -0.181**  -0.244***
+                          (0.065)    (0.046)
+   emission_experienced    -0.072           
+                          (0.076)           
+      trade_experienced    -0.079           
+                          (0.089)           
+emission_experience_num                0.008
+                                     (0.013)
+   trade_experience_num               -0.022
+                                     (0.015)
+                      N      2880       2880
+                    AIC   11694.4    11694.0
+                    BIC   11712.3    11711.9
+
+
+=== Outcome: production_diff | Clustered SE (by participant_code) ===
+    Y = production_diff      (1)      (2)
+              Intercept   -0.181  -0.244*
+                         (0.144)  (0.106)
+   emission_experienced   -0.072         
+                         (0.173)         
+      trade_experienced   -0.079         
+                         (0.208)         
+emission_experience_num             0.008
+                                  (0.029)
+   trade_experience_num            -0.022
+                                  (0.022)
+                      N     2880     2880
+                    AIC  11694.4  11694.0
+                    BIC  11712.3  11711.9
+
+
+Standard errors in parentheses.
+* p<.05, ** p<.01, *** p<.001.
+

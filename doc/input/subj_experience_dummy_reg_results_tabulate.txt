@@ -1,0 +1,87 @@
+=== Outcome: emission_diff | HC3 Robust SE ===
+| Y = emission_diff    | (1)     | (2)      |
+|----------------------|---------|----------|
+| Intercept            | -0.136  | -0.170** |
+|                      | (0.097) | (0.053)  |
+| emission_experienced | -0.103  |          |
+|                      | (0.111) |          |
+| trade_experienced    |         | -0.201   |
+|                      |         | (0.126)  |
+| N                    | 2880    | 2880     |
+| AIC                  | 13615.9 | 13614.3  |
+| BIC                  | 13627.8 | 13626.2  |
+
+
+=== Outcome: emission_diff | Clustered SE (by participant_code) ===
+| Y = emission_diff    | (1)     | (2)     |
+|----------------------|---------|---------|
+| Intercept            | -0.136  | -0.170  |
+|                      | (0.202) | (0.115) |
+| emission_experienced | -0.103  |         |
+|                      | (0.241) |         |
+| trade_experienced    |         | -0.201  |
+|                      |         | (0.332) |
+| N                    | 2880    | 2880    |
+| AIC                  | 13615.9 | 13614.3 |
+| BIC                  | 13627.8 | 13626.2 |
+
+
+=== Outcome: net_profit_diff | HC3 Robust SE ===
+| Y = net_profit_diff   | (1)       | (2)        |
+|-----------------------|-----------|------------|
+| Intercept             | -0.214    | -11.114*** |
+|                       | (2.995)   | (2.463)    |
+| emission_experienced  | -12.384** |            |
+|                       | (4.072)   |            |
+| trade_experienced     |           | 12.729**   |
+|                       |           | (4.415)    |
+| N                     | 2880      | 2880       |
+| AIC                   | 35443.4   | 35445.3    |
+| BIC                   | 35455.4   | 35457.3    |
+
+
+=== Outcome: net_profit_diff | Clustered SE (by participant_code) ===
+| Y = net_profit_diff   | (1)      | (2)      |
+|-----------------------|----------|----------|
+| Intercept             | -0.214   | -11.114  |
+|                       | (6.737)  | (8.329)  |
+| emission_experienced  | -12.384  |          |
+|                       | (11.705) |          |
+| trade_experienced     |          | 12.729   |
+|                       |          | (11.274) |
+| N                     | 2880     | 2880     |
+| AIC                   | 35443.4  | 35445.3  |
+| BIC                   | 35455.4  | 35457.3  |
+
+
+=== Outcome: production_diff | HC3 Robust SE ===
+| Y = production_diff   | (1)      | (2)       |
+|-----------------------|----------|-----------|
+| Intercept             | -0.194** | -0.230*** |
+|                       | (0.063)  | (0.038)   |
+| emission_experienced  | -0.074   |           |
+|                       | (0.075)  |           |
+| trade_experienced     |          | -0.082    |
+|                       |          | (0.088)   |
+| N                     | 2880     | 2880      |
+| AIC                   | 11693.2  | 11693.3   |
+| BIC                   | 11705.1  | 11705.2   |
+
+
+=== Outcome: production_diff | Clustered SE (by participant_code) ===
+| Y = production_diff   | (1)     | (2)      |
+|-----------------------|---------|----------|
+| Intercept             | -0.194  | -0.230** |
+|                       | (0.143) | (0.089)  |
+| emission_experienced  | -0.074  |          |
+|                       | (0.173) |          |
+| trade_experienced     |         | -0.082   |
+|                       |         | (0.207)  |
+| N                     | 2880    | 2880     |
+| AIC                   | 11693.2 | 11693.3  |
+| BIC                   | 11705.1 | 11705.2  |
+
+
+Standard errors in parentheses.
+* p<.05, ** p<.01, *** p<.001.
+

@@ -1,0 +1,15 @@
+=== Outcome: ind_risk | HC3 Robust SE ===
+| Y = ind_risk          | (1)      |
+|-----------------------|----------|
+| Intercept             | 3.942*** |
+|                       | (0.107)  |
+| work_experience_years | 0.006    |
+|                       | (0.015)  |
+| N                     | 120      |
+| AIC                   | 304.3    |
+| BIC                   | 309.9    |
+
+
+Standard errors in parentheses.
+* p<.05, ** p<.01, *** p<.001.
+

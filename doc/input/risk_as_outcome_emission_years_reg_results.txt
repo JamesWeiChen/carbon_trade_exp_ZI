@@ -1,0 +1,14 @@
+=== Outcome: ind_risk | HC3 Robust SE ===
+             Y = ind_risk       (1)
+                Intercept  3.964***
+                            (0.098)
+emission_experience_years     0.001
+                            (0.020)
+                        N       120
+                      AIC     304.4
+                      BIC     310.0
+
+
+Standard errors in parentheses.
+* p<.05, ** p<.01, *** p<.001.
+

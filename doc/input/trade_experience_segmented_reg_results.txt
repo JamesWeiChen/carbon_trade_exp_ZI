@@ -1,0 +1,213 @@
+=== Outcome: price_diff | HC3 Robust SE ===
+         Y = price_diff         (1)         (2)
+              Intercept   62.478***   62.612***
+                            (3.326)     (3.272)
+       buyer_years_1to2    -9.028**            
+                            (2.853)            
+      buyer_years_3plus      -1.102      -0.379
+                            (2.488)     (2.469)
+      seller_years_1to2   13.402***            
+                            (3.888)            
+     seller_years_3plus    7.584***    6.726***
+                            (1.870)     (1.859)
+                seconds   -0.247***   -0.247***
+                            (0.022)     (0.022)
+            total_round   -2.391***   -2.399***
+                            (0.252)     (0.253)
+               is_equal       3.692       4.224
+                            (2.772)     (2.791)
+         is_equal_first    9.300***    9.860***
+                            (1.850)     (1.828)
+is_equal:is_equal_first  -20.677***  -21.929***
+                            (3.433)     (3.425)
+           eq_price_low       0.992       1.125
+                            (1.488)     (1.502)
+          eq_price_high      -0.247      -0.278
+                            (1.911)     (1.912)
+      buyer_is_dominant       2.138       2.563
+                            (1.793)     (1.775)
+     seller_is_dominant       0.853       0.543
+                            (1.688)     (1.683)
+                      N        2005        2005
+                    AIC     19515.0     19534.3
+                    BIC     19593.4     19601.5
+
+
+=== Outcome: price_diff | Clustered SE (by cluster_round) ===
+         Y = price_diff        (1)        (2)
+              Intercept  62.478***  62.612***
+                           (6.883)    (6.803)
+       buyer_years_1to2   -9.028**           
+                           (3.372)           
+      buyer_years_3plus     -1.102     -0.379
+                           (2.558)    (2.577)
+      seller_years_1to2   13.402**           
+                           (5.015)           
+     seller_years_3plus   7.584***   6.726***
+                           (1.804)    (1.785)
+                seconds  -0.247***  -0.247***
+                           (0.032)    (0.032)
+            total_round  -2.391***  -2.399***
+                           (0.578)    (0.584)
+               is_equal      3.692      4.224
+                           (5.823)    (5.843)
+         is_equal_first     9.300*     9.860*
+                           (3.905)    (3.979)
+is_equal:is_equal_first  -20.677**  -21.929**
+                           (7.273)    (7.279)
+           eq_price_low      0.992      1.125
+                           (3.526)    (3.614)
+          eq_price_high     -0.247     -0.278
+                           (4.270)    (4.288)
+      buyer_is_dominant      2.138      2.563
+                           (2.583)    (2.561)
+     seller_is_dominant      0.853      0.543
+                           (1.432)    (1.441)
+                      N       2005       2005
+                    AIC    19515.0    19534.3
+                    BIC    19593.4    19601.5
+
+
+=== Outcome: abs_price_diff | HC3 Robust SE ===
+     Y = abs_price_diff         (1)         (2)
+              Intercept   62.355***   62.488***
+                            (3.320)     (3.267)
+       buyer_years_1to2    -9.050**            
+                            (2.844)            
+      buyer_years_3plus      -1.156      -0.431
+                            (2.484)     (2.465)
+      seller_years_1to2   13.412***            
+                            (3.889)            
+     seller_years_3plus    7.856***    6.997***
+                            (1.861)     (1.850)
+                seconds   -0.244***   -0.244***
+                            (0.022)     (0.022)
+            total_round   -2.380***   -2.388***
+                            (0.251)     (0.252)
+               is_equal       3.734       4.267
+                            (2.769)     (2.788)
+         is_equal_first    9.194***    9.755***
+                            (1.843)     (1.822)
+is_equal:is_equal_first  -19.798***  -21.052***
+                            (3.428)     (3.420)
+           eq_price_low       0.799       0.932
+                            (1.487)     (1.501)
+          eq_price_high      -0.162      -0.193
+                            (1.907)     (1.908)
+      buyer_is_dominant       1.900       2.326
+                            (1.790)     (1.773)
+     seller_is_dominant       0.834       0.524
+                            (1.688)     (1.683)
+                      N        2005        2005
+                    AIC     19507.9     19527.3
+                    BIC     19586.3     19594.5
+
+
+=== Outcome: abs_price_diff | Clustered SE (by cluster_round) ===
+     Y = abs_price_diff        (1)        (2)
+              Intercept  62.355***  62.488***
+                           (6.882)    (6.803)
+       buyer_years_1to2   -9.050**           
+                           (3.353)           
+      buyer_years_3plus     -1.156     -0.431
+                           (2.556)    (2.571)
+      seller_years_1to2   13.412**           
+                           (5.023)           
+     seller_years_3plus   7.856***   6.997***
+                           (1.778)    (1.763)
+                seconds  -0.244***  -0.244***
+                           (0.032)    (0.032)
+            total_round  -2.380***  -2.388***
+                           (0.577)    (0.583)
+               is_equal      3.734      4.267
+                           (5.831)    (5.851)
+         is_equal_first     9.194*     9.755*
+                           (3.887)    (3.962)
+is_equal:is_equal_first  -19.798**  -21.052**
+                           (7.254)    (7.265)
+           eq_price_low      0.799      0.932
+                           (3.520)    (3.608)
+          eq_price_high     -0.162     -0.193
+                           (4.269)    (4.289)
+      buyer_is_dominant      1.900      2.326
+                           (2.584)    (2.561)
+     seller_is_dominant      0.834      0.524
+                           (1.432)    (1.440)
+                      N       2005       2005
+                    AIC    19507.9    19527.3
+                    BIC    19586.3    19594.5
+
+
+=== Outcome: quantity | HC3 Robust SE ===
+           Y = quantity        (1)       (2)
+              Intercept   1.491***  1.465***
+                           (0.077)   (0.076)
+       buyer_years_1to2  -0.173***          
+                           (0.048)          
+      buyer_years_3plus    0.247**   0.255**
+                           (0.079)   (0.079)
+      seller_years_1to2   -0.146**          
+                           (0.053)          
+     seller_years_3plus      0.077     0.085
+                           (0.065)   (0.065)
+                seconds    -0.001*   -0.001*
+                           (0.001)   (0.001)
+            total_round   -0.015**  -0.015**
+                           (0.005)   (0.005)
+               is_equal   -0.168**  -0.165**
+                           (0.058)   (0.058)
+         is_equal_first   -0.166**  -0.154**
+                           (0.055)   (0.054)
+is_equal:is_equal_first    0.249**   0.241**
+                           (0.082)   (0.082)
+           eq_price_low      0.083     0.084
+                           (0.045)   (0.045)
+          eq_price_high      0.015     0.013
+                           (0.039)   (0.039)
+      buyer_is_dominant   0.233***  0.244***
+                           (0.049)   (0.049)
+     seller_is_dominant   0.262***  0.269***
+                           (0.044)   (0.044)
+                      N       2005      2005
+                    AIC     4912.6    4914.8
+                    BIC     4991.1    4982.0
+
+
+=== Outcome: quantity | Clustered SE (by cluster_round) ===
+           Y = quantity        (1)       (2)
+              Intercept   1.491***  1.465***
+                           (0.097)   (0.095)
+       buyer_years_1to2  -0.173***          
+                           (0.050)          
+      buyer_years_3plus    0.247**   0.255**
+                           (0.085)   (0.086)
+      seller_years_1to2    -0.146*          
+                           (0.059)          
+     seller_years_3plus      0.077     0.085
+                           (0.081)   (0.081)
+                seconds   -0.001**  -0.001**
+                           (0.001)   (0.001)
+            total_round    -0.015*   -0.015*
+                           (0.007)   (0.007)
+               is_equal    -0.168*   -0.165*
+                           (0.077)   (0.077)
+         is_equal_first    -0.166*   -0.154*
+                           (0.074)   (0.072)
+is_equal:is_equal_first     0.249*    0.241*
+                           (0.098)   (0.097)
+           eq_price_low      0.083     0.084
+                           (0.066)   (0.066)
+          eq_price_high      0.015     0.013
+                           (0.045)   (0.045)
+      buyer_is_dominant   0.233***  0.244***
+                           (0.049)   (0.050)
+     seller_is_dominant   0.262***  0.269***
+                           (0.050)   (0.050)
+                      N       2005      2005
+                    AIC     4912.6    4914.8
+                    BIC     4991.1    4982.0
+
+
+Standard errors in parentheses.
+* p<.05, ** p<.01, *** p<.001.
+

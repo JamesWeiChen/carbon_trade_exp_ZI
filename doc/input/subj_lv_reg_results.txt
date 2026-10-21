@@ -1,0 +1,357 @@
+=== Outcome: emission_diff | HC3 Robust SE ===
+              Y = emission_diff        (1)        (2)        (3)        (4)        (5)        (6)
+                      Intercept   0.766***      0.106  -0.515***  -0.504***  -0.895***  -0.954***
+                                   (0.101)    (0.072)    (0.094)    (0.091)    (0.137)    (0.181)
+                       is_trade  -1.493***  -0.613***                                            
+                                   (0.124)    (0.082)                                            
+                    is_dominant   0.732***   4.033***    -0.368*     -0.422     -0.422     -0.422
+                                   (0.185)    (0.435)    (0.169)    (0.281)    (0.281)    (0.281)
+           is_dominant:is_trade             -4.401***                                            
+                                              (0.471)                                            
+                       is_equal                           0.292*     0.292*   0.477***      0.452
+                                                         (0.132)    (0.127)    (0.137)    (0.253)
+                 is_equal_first                           -0.054     -0.054     -0.054      0.055
+                                                         (0.113)    (0.111)    (0.111)    (0.231)
+        is_equal:is_equal_first                         -0.613**  -0.613***   -0.607**     -0.590
+                                                         (0.189)    (0.186)    (0.185)    (0.352)
+                   eq_price_low                         0.774***   0.510***   0.562***   0.570***
+                                                         (0.111)    (0.092)    (0.093)    (0.094)
+                  eq_price_high                        -0.734***  -0.476***  -0.385***  -0.374***
+                                                         (0.110)    (0.097)    (0.097)    (0.099)
+       is_dominant:eq_price_low                                     1.317**    1.317**    1.317**
+                                                                    (0.411)    (0.410)    (0.410)
+      is_dominant:eq_price_high                                   -1.292***  -1.292***  -1.292***
+                                                                    (0.389)    (0.390)    (0.390)
+                        round_c                                               0.063***    0.072**
+                                                                               (0.015)    (0.024)
+               is_equal:round_c                                                             0.021
+                                                                                          (0.067)
+         is_equal_first:round_c                                                            -0.020
+                                                                                          (0.033)
+is_equal:is_equal_first:round_c                                                            -0.030
+                                                                                          (0.094)
+                              N       2880       2880       2160       2160       2160       2160
+                            AIC    13390.6    13104.7     9343.5     9255.7     9240.4     9245.7
+                            BIC    13408.5    13128.6     9383.3     9306.8     9297.2     9319.5
+
+--- Extra effects for model (3) (HC3 Robust SE) ---
+equal effect when equal is second order: effect=0.292, SE=0.132, t=2.219, p=0.026
+equal effect when equal is first order: effect=-0.321, SE=0.135, t=-2.370, p=0.018
+order heterogeneity in equal effect: effect=-0.613, SE=0.189, t=-3.243, p=0.001
+
+--- Extra effects for model (4) (HC3 Robust SE) ---
+equal effect when equal is second order: effect=0.292, SE=0.127, t=2.300, p=0.021
+equal effect when equal is first order: effect=-0.321, SE=0.135, t=-2.381, p=0.017
+order heterogeneity in equal effect: effect=-0.613, SE=0.186, t=-3.295, p=0.001
+
+--- Extra effects for model (5) (HC3 Robust SE) ---
+equal effect when equal is second order: effect=0.477, SE=0.137, t=3.478, p=0.001
+equal effect when equal is first order: effect=-0.129, SE=0.145, t=-0.890, p=0.374
+order heterogeneity in equal effect: effect=-0.607, SE=0.185, t=-3.270, p=0.001
+
+--- Extra effects for model (6) (HC3 Robust SE) ---
+equal effect when equal is second order at round 1: effect=0.452, SE=0.253, t=1.789, p=0.074
+equal effect when equal is first order at round 1: effect=-0.138, SE=0.245, t=-0.564, p=0.573
+order heterogeneity in equal effect at round 1: effect=-0.590, SE=0.352, t=-1.675, p=0.094
+equal-vs-GF round slope when equal is second order: effect=0.021, SE=0.067, t=0.319, p=0.749
+equal-vs-GF round slope when equal is first order: effect=-0.009, SE=0.067, t=-0.129, p=0.897
+
+
+=== Outcome: emission_diff | Clustered SE (by participant_code) ===
+              Y = emission_diff        (1)        (2)        (3)        (4)        (5)        (6)
+                      Intercept   0.766***      0.106  -0.515***   -0.504**  -0.895***  -0.954***
+                                   (0.185)    (0.103)    (0.147)    (0.154)    (0.188)    (0.226)
+                       is_trade  -1.493***  -0.613***                                            
+                                   (0.235)    (0.120)                                            
+                    is_dominant      0.732   4.033***     -0.368     -0.422     -0.422     -0.422
+                                   (0.430)    (0.808)    (0.392)    (0.440)    (0.440)    (0.440)
+           is_dominant:is_trade             -4.401***                                            
+                                              (0.715)                                            
+                       is_equal                            0.292      0.292     0.477*      0.452
+                                                         (0.183)    (0.180)    (0.194)    (0.268)
+                 is_equal_first                           -0.054     -0.054     -0.054      0.055
+                                                         (0.243)    (0.244)    (0.244)    (0.326)
+        is_equal:is_equal_first                          -0.613*    -0.613*    -0.607*     -0.590
+                                                         (0.280)    (0.282)    (0.282)    (0.397)
+                   eq_price_low                         0.774***   0.510***   0.562***   0.570***
+                                                         (0.088)    (0.070)    (0.070)    (0.070)
+                  eq_price_high                        -0.734***  -0.476***  -0.385***  -0.374***
+                                                         (0.108)    (0.075)    (0.076)    (0.078)
+       is_dominant:eq_price_low                                    1.317***   1.317***   1.317***
+                                                                    (0.266)    (0.262)    (0.261)
+      is_dominant:eq_price_high                                   -1.292***  -1.292***  -1.292***
+                                                                    (0.385)    (0.381)    (0.380)
+                        round_c                                               0.063***    0.072**
+                                                                               (0.014)    (0.025)
+               is_equal:round_c                                                             0.021
+                                                                                          (0.043)
+         is_equal_first:round_c                                                            -0.020
+                                                                                          (0.032)
+is_equal:is_equal_first:round_c                                                            -0.030
+                                                                                          (0.078)
+                              N       2880       2880       2160       2160       2160       2160
+                            AIC    13390.6    13104.7     9343.5     9255.7     9240.4     9245.7
+                            BIC    13408.5    13128.6     9383.3     9306.8     9297.2     9319.5
+
+--- Extra effects for model (3) (Clustered SE (by participant_code)) ---
+equal effect when equal is second order: effect=0.292, SE=0.183, t=1.599, p=0.110
+equal effect when equal is first order: effect=-0.321, SE=0.216, t=-1.487, p=0.137
+order heterogeneity in equal effect: effect=-0.613, SE=0.280, t=-2.192, p=0.028
+
+--- Extra effects for model (4) (Clustered SE (by participant_code)) ---
+equal effect when equal is second order: effect=0.292, SE=0.180, t=1.625, p=0.104
+equal effect when equal is first order: effect=-0.321, SE=0.216, t=-1.483, p=0.138
+order heterogeneity in equal effect: effect=-0.613, SE=0.282, t=-2.175, p=0.030
+
+--- Extra effects for model (5) (Clustered SE (by participant_code)) ---
+equal effect when equal is second order: effect=0.477, SE=0.194, t=2.457, p=0.014
+equal effect when equal is first order: effect=-0.129, SE=0.223, t=-0.582, p=0.561
+order heterogeneity in equal effect: effect=-0.607, SE=0.282, t=-2.152, p=0.031
+
+--- Extra effects for model (6) (Clustered SE (by participant_code)) ---
+equal effect when equal is second order at round 1: effect=0.452, SE=0.268, t=1.685, p=0.092
+equal effect when equal is first order at round 1: effect=-0.138, SE=0.288, t=-0.480, p=0.631
+order heterogeneity in equal effect at round 1: effect=-0.590, SE=0.397, t=-1.488, p=0.137
+equal-vs-GF round slope when equal is second order: effect=0.021, SE=0.043, t=0.497, p=0.619
+equal-vs-GF round slope when equal is first order: effect=-0.009, SE=0.064, t=-0.135, p=0.893
+
+
+=== Outcome: net_profit_diff | HC3 Robust SE ===
+            Y = net_profit_diff        (1)        (2)        (3)       (4)       (5)       (6)
+                      Intercept  -7.438***  -5.856***  -14.414**  -14.734*  -19.529*   -19.933
+                                   (1.312)    (0.860)    (5.545)   (6.182)   (9.607)  (11.478)
+                       is_trade    -7.045*   -9.155**                                         
+                                   (2.933)    (3.283)                                         
+                    is_dominant  19.710***  11.800***   22.346**   23.945*   23.945*   23.945*
+                                   (5.167)    (2.528)    (6.852)   (9.819)   (9.812)   (9.839)
+           is_dominant:is_trade                10.546                                         
+                                              (7.290)                                         
+                       is_equal                            4.500     4.500     6.764     6.988
+                                                         (4.417)   (4.423)   (5.951)  (10.042)
+                 is_equal_first                           -0.840    -0.840    -0.840    -0.861
+                                                         (6.957)   (6.964)   (6.967)  (15.274)
+        is_equal:is_equal_first                           -7.118    -7.118    -7.039    -4.539
+                                                        (11.817)  (11.825)  (11.819)  (21.523)
+                   eq_price_low                            5.088     5.696     6.331     6.371
+                                                         (6.994)   (8.079)   (8.176)   (8.257)
+                  eq_price_high                           -7.173    -6.846    -5.732    -5.537
+                                                         (6.939)   (7.880)   (8.042)   (8.309)
+       is_dominant:eq_price_low                                     -3.038    -3.038    -3.038
+                                                                  (15.434)  (15.432)  (15.461)
+      is_dominant:eq_price_high                                     -1.637    -1.637    -1.637
+                                                                  (16.862)  (16.854)  (16.880)
+                        round_c                                                0.766     0.825
+                                                                             (1.000)   (1.205)
+               is_equal:round_c                                                         -0.017
+                                                                                       (1.820)
+         is_equal_first:round_c                                                          0.004
+                                                                                       (2.142)
+is_equal:is_equal_first:round_c                                                         -0.994
+                                                                                       (5.369)
+                              N       2880       2880       2160      2160      2160      2160
+                            AIC    35436.8    35438.1    27182.8   27186.8   27188.1   27194.1
+                            BIC    35454.7    35461.9    27222.6   27237.9   27244.9   27267.9
+
+--- Extra effects for model (3) (HC3 Robust SE) ---
+equal effect when equal is second order: effect=4.500, SE=4.417, t=1.019, p=0.308
+equal effect when equal is first order: effect=-2.618, SE=10.915, t=-0.240, p=0.810
+order heterogeneity in equal effect: effect=-7.118, SE=11.817, t=-0.602, p=0.547
+
+--- Extra effects for model (4) (HC3 Robust SE) ---
+equal effect when equal is second order: effect=4.500, SE=4.423, t=1.017, p=0.309
+equal effect when equal is first order: effect=-2.618, SE=10.922, t=-0.240, p=0.811
+order heterogeneity in equal effect: effect=-7.118, SE=11.825, t=-0.602, p=0.547
+
+--- Extra effects for model (5) (HC3 Robust SE) ---
+equal effect when equal is second order: effect=6.764, SE=5.951, t=1.137, p=0.256
+equal effect when equal is first order: effect=-0.274, SE=11.395, t=-0.024, p=0.981
+order heterogeneity in equal effect: effect=-7.039, SE=11.819, t=-0.596, p=0.551
+
+--- Extra effects for model (6) (HC3 Robust SE) ---
+equal effect when equal is second order at round 1: effect=6.988, SE=10.042, t=0.696, p=0.487
+equal effect when equal is first order at round 1: effect=2.449, SE=18.868, t=0.130, p=0.897
+order heterogeneity in equal effect at round 1: effect=-4.539, SE=21.523, t=-0.211, p=0.833
+equal-vs-GF round slope when equal is second order: effect=-0.017, SE=1.820, t=-0.009, p=0.992
+equal-vs-GF round slope when equal is first order: effect=-1.011, SE=5.025, t=-0.201, p=0.841
+
+
+=== Outcome: net_profit_diff | Clustered SE (by participant_code) ===
+            Y = net_profit_diff       (1)        (2)       (3)       (4)       (5)       (6)
+                      Intercept   -7.438*  -5.856***   -14.414   -14.734   -19.529   -19.933
+                                  (3.053)    (1.108)   (8.472)   (9.132)  (11.377)  (15.098)
+                       is_trade    -7.045     -9.155                                        
+                                  (8.694)   (10.308)                                        
+                    is_dominant    19.710   11.800**    22.346    23.945    23.945    23.945
+                                 (13.292)    (4.505)  (17.411)  (19.368)  (19.355)  (19.397)
+           is_dominant:is_trade               10.546                                        
+                                            (17.113)                                        
+                       is_equal                          4.500     4.500     6.764     6.988
+                                                       (7.358)   (7.357)   (8.525)  (13.095)
+                 is_equal_first                         -0.840    -0.840    -0.840    -0.861
+                                                      (19.809)  (19.818)  (19.823)  (23.032)
+        is_equal:is_equal_first                         -7.118    -7.118    -7.039    -4.539
+                                                      (13.823)  (13.827)  (13.797)  (24.224)
+                   eq_price_low                          5.088     5.696     6.331     6.371
+                                                       (4.827)   (5.404)   (5.447)   (5.604)
+                  eq_price_high                         -7.173    -6.846    -5.732    -5.537
+                                                       (6.444)   (7.024)   (6.932)   (7.617)
+       is_dominant:eq_price_low                                   -3.038    -3.038    -3.038
+                                                                (12.656)  (12.591)  (12.610)
+      is_dominant:eq_price_high                                   -1.637    -1.637    -1.637
+                                                                (17.873)  (17.876)  (17.892)
+                        round_c                                              0.766     0.825
+                                                                           (0.692)   (1.277)
+               is_equal:round_c                                                       -0.017
+                                                                                     (1.662)
+         is_equal_first:round_c                                                        0.004
+                                                                                     (1.586)
+is_equal:is_equal_first:round_c                                                       -0.994
+                                                                                     (4.944)
+                              N      2880       2880      2160      2160      2160      2160
+                            AIC   35436.8    35438.1   27182.8   27186.8   27188.1   27194.1
+                            BIC   35454.7    35461.9   27222.6   27237.9   27244.9   27267.9
+
+--- Extra effects for model (3) (Clustered SE (by participant_code)) ---
+equal effect when equal is second order: effect=4.500, SE=7.358, t=0.612, p=0.541
+equal effect when equal is first order: effect=-2.618, SE=11.572, t=-0.226, p=0.821
+order heterogeneity in equal effect: effect=-7.118, SE=13.823, t=-0.515, p=0.607
+
+--- Extra effects for model (4) (Clustered SE (by participant_code)) ---
+equal effect when equal is second order: effect=4.500, SE=7.357, t=0.612, p=0.541
+equal effect when equal is first order: effect=-2.618, SE=11.580, t=-0.226, p=0.821
+order heterogeneity in equal effect: effect=-7.118, SE=13.827, t=-0.515, p=0.607
+
+--- Extra effects for model (5) (Clustered SE (by participant_code)) ---
+equal effect when equal is second order: effect=6.764, SE=8.525, t=0.793, p=0.428
+equal effect when equal is first order: effect=-0.274, SE=11.244, t=-0.024, p=0.981
+order heterogeneity in equal effect: effect=-7.039, SE=13.797, t=-0.510, p=0.610
+
+--- Extra effects for model (6) (Clustered SE (by participant_code)) ---
+equal effect when equal is second order at round 1: effect=6.988, SE=13.095, t=0.534, p=0.594
+equal effect when equal is first order at round 1: effect=2.449, SE=20.659, t=0.119, p=0.906
+order heterogeneity in equal effect at round 1: effect=-4.539, SE=24.224, t=-0.187, p=0.851
+equal-vs-GF round slope when equal is second order: effect=-0.017, SE=1.662, t=-0.010, p=0.992
+equal-vs-GF round slope when equal is first order: effect=-1.011, SE=4.675, t=-0.216, p=0.829
+
+
+=== Outcome: production_diff | HC3 Robust SE ===
+            Y = production_diff        (1)        (2)        (3)        (4)        (5)        (6)
+                      Intercept   0.390***      0.106  -0.546***  -0.545***  -0.898***  -0.923***
+                                   (0.073)    (0.072)    (0.076)    (0.080)    (0.114)    (0.142)
+                       is_trade  -0.992***  -0.613***                                            
+                                   (0.083)    (0.082)                                            
+                    is_dominant   0.543***   1.964***      0.069      0.067      0.067      0.067
+                                   (0.096)    (0.226)    (0.090)    (0.153)    (0.153)    (0.153)
+           is_dominant:is_trade             -1.894***                                            
+                                              (0.246)                                            
+                       is_equal                         0.365***   0.365***   0.531***    0.526**
+                                                         (0.094)    (0.094)    (0.102)    (0.185)
+                 is_equal_first                           -0.103     -0.103     -0.103     -0.051
+                                                         (0.086)    (0.086)    (0.086)    (0.182)
+        is_equal:is_equal_first                         -0.382**   -0.382**   -0.376**     -0.393
+                                                         (0.145)    (0.145)    (0.145)    (0.280)
+                   eq_price_low                         0.588***   0.511***   0.558***   0.561***
+                                                         (0.084)    (0.091)    (0.092)    (0.092)
+                  eq_price_high                        -0.551***  -0.467***  -0.385***  -0.382***
+                                                         (0.086)    (0.096)    (0.095)    (0.097)
+       is_dominant:eq_price_low                                       0.384      0.384      0.384
+                                                                    (0.222)    (0.222)    (0.222)
+      is_dominant:eq_price_high                                      -0.419     -0.419     -0.419
+                                                                    (0.214)    (0.215)    (0.215)
+                        round_c                                               0.056***   0.061***
+                                                                               (0.012)    (0.017)
+               is_equal:round_c                                                             0.007
+                                                                                          (0.049)
+         is_equal_first:round_c                                                            -0.009
+                                                                                          (0.026)
+is_equal:is_equal_first:round_c                                                            -0.004
+                                                                                          (0.075)
+                              N       2880       2880       2160       2160       2160       2160
+                            AIC    11492.5    11394.7     8191.3     8180.7     8159.7     8165.5
+                            BIC    11510.4    11418.5     8231.0     8231.8     8216.5     8239.3
+
+--- Extra effects for model (3) (HC3 Robust SE) ---
+equal effect when equal is second order: effect=0.365, SE=0.094, t=3.865, p=0.000
+equal effect when equal is first order: effect=-0.017, SE=0.110, t=-0.158, p=0.874
+order heterogeneity in equal effect: effect=-0.382, SE=0.145, t=-2.627, p=0.009
+
+--- Extra effects for model (4) (HC3 Robust SE) ---
+equal effect when equal is second order: effect=0.365, SE=0.094, t=3.897, p=0.000
+equal effect when equal is first order: effect=-0.017, SE=0.110, t=-0.158, p=0.874
+order heterogeneity in equal effect: effect=-0.382, SE=0.145, t=-2.633, p=0.008
+
+--- Extra effects for model (5) (HC3 Robust SE) ---
+equal effect when equal is second order: effect=0.531, SE=0.102, t=5.222, p=0.000
+equal effect when equal is first order: effect=0.155, SE=0.118, t=1.309, p=0.190
+order heterogeneity in equal effect: effect=-0.376, SE=0.145, t=-2.603, p=0.009
+
+--- Extra effects for model (6) (HC3 Robust SE) ---
+equal effect when equal is second order at round 1: effect=0.526, SE=0.185, t=2.849, p=0.004
+equal effect when equal is first order at round 1: effect=0.133, SE=0.209, t=0.639, p=0.523
+order heterogeneity in equal effect at round 1: effect=-0.393, SE=0.280, t=-1.406, p=0.160
+equal-vs-GF round slope when equal is second order: effect=0.007, SE=0.049, t=0.143, p=0.886
+equal-vs-GF round slope when equal is first order: effect=0.003, SE=0.057, t=0.046, p=0.963
+
+
+=== Outcome: production_diff | Clustered SE (by participant_code) ===
+            Y = production_diff        (1)        (2)        (3)        (4)        (5)        (6)
+                      Intercept   0.390***      0.106  -0.546***  -0.545***  -0.898***  -0.923***
+                                   (0.118)    (0.103)    (0.120)    (0.124)    (0.149)    (0.175)
+                       is_trade  -0.992***  -0.613***                                            
+                                   (0.138)    (0.120)                                            
+                    is_dominant     0.543*   1.964***      0.069      0.067      0.067      0.067
+                                   (0.226)    (0.414)    (0.212)    (0.238)    (0.238)    (0.238)
+           is_dominant:is_trade             -1.894***                                            
+                                              (0.372)                                            
+                       is_equal                          0.365**    0.365**   0.531***     0.526*
+                                                         (0.126)    (0.126)    (0.140)    (0.211)
+                 is_equal_first                           -0.103     -0.103     -0.103     -0.051
+                                                         (0.185)    (0.185)    (0.185)    (0.256)
+        is_equal:is_equal_first                           -0.382     -0.382     -0.376     -0.393
+                                                         (0.196)    (0.197)    (0.197)    (0.320)
+                   eq_price_low                         0.588***   0.511***   0.558***   0.561***
+                                                         (0.062)    (0.069)    (0.069)    (0.069)
+                  eq_price_high                        -0.551***  -0.467***  -0.385***  -0.382***
+                                                         (0.072)    (0.075)    (0.074)    (0.075)
+       is_dominant:eq_price_low                                     0.384**    0.384**    0.384**
+                                                                    (0.148)    (0.144)    (0.144)
+      is_dominant:eq_price_high                                     -0.419*    -0.419*    -0.419*
+                                                                    (0.203)    (0.199)    (0.199)
+                        round_c                                               0.056***    0.061**
+                                                                               (0.012)    (0.019)
+               is_equal:round_c                                                             0.007
+                                                                                          (0.037)
+         is_equal_first:round_c                                                            -0.009
+                                                                                          (0.026)
+is_equal:is_equal_first:round_c                                                            -0.004
+                                                                                          (0.067)
+                              N       2880       2880       2160       2160       2160       2160
+                            AIC    11492.5    11394.7     8191.3     8180.7     8159.7     8165.5
+                            BIC    11510.4    11418.5     8231.0     8231.8     8216.5     8239.3
+
+--- Extra effects for model (3) (Clustered SE (by participant_code)) ---
+equal effect when equal is second order: effect=0.365, SE=0.126, t=2.891, p=0.004
+equal effect when equal is first order: effect=-0.017, SE=0.150, t=-0.116, p=0.908
+order heterogeneity in equal effect: effect=-0.382, SE=0.196, t=-1.945, p=0.052
+
+--- Extra effects for model (4) (Clustered SE (by participant_code)) ---
+equal effect when equal is second order: effect=0.365, SE=0.126, t=2.905, p=0.004
+equal effect when equal is first order: effect=-0.017, SE=0.150, t=-0.116, p=0.908
+order heterogeneity in equal effect: effect=-0.382, SE=0.197, t=-1.939, p=0.053
+
+--- Extra effects for model (5) (Clustered SE (by participant_code)) ---
+equal effect when equal is second order: effect=0.531, SE=0.140, t=3.802, p=0.000
+equal effect when equal is first order: effect=0.155, SE=0.157, t=0.990, p=0.322
+order heterogeneity in equal effect: effect=-0.376, SE=0.197, t=-1.909, p=0.056
+
+--- Extra effects for model (6) (Clustered SE (by participant_code)) ---
+equal effect when equal is second order at round 1: effect=0.526, SE=0.211, t=2.495, p=0.013
+equal effect when equal is first order at round 1: effect=0.133, SE=0.236, t=0.564, p=0.573
+order heterogeneity in equal effect at round 1: effect=-0.393, SE=0.320, t=-1.228, p=0.219
+equal-vs-GF round slope when equal is second order: effect=0.007, SE=0.037, t=0.192, p=0.848
+equal-vs-GF round slope when equal is first order: effect=0.003, SE=0.056, t=0.048, p=0.962
+
+
+Standard errors in parentheses.
+* p<.05, ** p<.01, *** p<.001.
+

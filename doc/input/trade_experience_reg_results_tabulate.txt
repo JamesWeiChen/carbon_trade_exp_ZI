@@ -1,0 +1,135 @@
+=== Outcome: price_diff | HC3 Robust SE ===
+| Y = price_diff                                             | (1)       | (2)       |
+|------------------------------------------------------------|-----------|-----------|
+| Intercept                                                  | 30.703*** | 30.931*** |
+|                                                            | (0.918)   | (0.887)   |
+| buyer_experienced                                          | -6.402**  |           |
+|                                                            | (2.396)   |           |
+| seller_experienced                                         | 5.678*    |           |
+|                                                            | (2.358)   |           |
+| buyer_experienced:seller_experienced                       | -1.863    |           |
+|                                                            | (5.376)   |           |
+| buyer_trade_experience_years                               |           | -1.621*** |
+|                                                            |           | (0.352)   |
+| seller_trade_experience_years                              |           | 0.899     |
+|                                                            |           | (0.462)   |
+| buyer_trade_experience_years:seller_trade_experience_years |           | 0.154     |
+|                                                            |           | (0.181)   |
+| N                                                          | 2005      | 2005      |
+| AIC                                                        | 19936.2   | 19934.6   |
+| BIC                                                        | 19958.6   | 19957.0   |
+
+
+=== Outcome: price_diff | Clustered SE (by cluster_round) ===
+| Y = price_diff                                             | (1)       | (2)       |
+|------------------------------------------------------------|-----------|-----------|
+| Intercept                                                  | 30.703*** | 30.931*** |
+|                                                            | (2.102)   | (2.122)   |
+| buyer_experienced                                          | -6.402*   |           |
+|                                                            | (2.852)   |           |
+| seller_experienced                                         | 5.678     |           |
+|                                                            | (2.924)   |           |
+| buyer_experienced:seller_experienced                       | -1.863    |           |
+|                                                            | (5.358)   |           |
+| buyer_trade_experience_years                               |           | -1.621*** |
+|                                                            |           | (0.425)   |
+| seller_trade_experience_years                              |           | 0.899     |
+|                                                            |           | (0.511)   |
+| buyer_trade_experience_years:seller_trade_experience_years |           | 0.154     |
+|                                                            |           | (0.155)   |
+| N                                                          | 2005      | 2005      |
+| AIC                                                        | 19936.2   | 19934.6   |
+| BIC                                                        | 19958.6   | 19957.0   |
+
+
+=== Outcome: abs_price_diff | HC3 Robust SE ===
+| Y = abs_price_diff                                         | (1)       | (2)       |
+|------------------------------------------------------------|-----------|-----------|
+| Intercept                                                  | 30.807*** | 31.041*** |
+|                                                            | (0.916)   | (0.884)   |
+| buyer_experienced                                          | -6.219**  |           |
+|                                                            | (2.381)   |           |
+| seller_experienced                                         | 6.037**   |           |
+|                                                            | (2.333)   |           |
+| buyer_experienced:seller_experienced                       | -2.364    |           |
+|                                                            | (5.348)   |           |
+| buyer_trade_experience_years                               |           | -1.575*** |
+|                                                            |           | (0.346)   |
+| seller_trade_experience_years                              |           | 0.965*    |
+|                                                            |           | (0.457)   |
+| buyer_trade_experience_years:seller_trade_experience_years |           | 0.137     |
+|                                                            |           | (0.180)   |
+| N                                                          | 2005      | 2005      |
+| AIC                                                        | 19917.1   | 19915.9   |
+| BIC                                                        | 19939.5   | 19938.3   |
+
+
+=== Outcome: abs_price_diff | Clustered SE (by cluster_round) ===
+| Y = abs_price_diff                                         | (1)       | (2)       |
+|------------------------------------------------------------|-----------|-----------|
+| Intercept                                                  | 30.807*** | 31.041*** |
+|                                                            | (2.096)   | (2.117)   |
+| buyer_experienced                                          | -6.219*   |           |
+|                                                            | (2.843)   |           |
+| seller_experienced                                         | 6.037*    |           |
+|                                                            | (2.865)   |           |
+| buyer_experienced:seller_experienced                       | -2.364    |           |
+|                                                            | (5.303)   |           |
+| buyer_trade_experience_years                               |           | -1.575*** |
+|                                                            |           | (0.422)   |
+| seller_trade_experience_years                              |           | 0.965     |
+|                                                            |           | (0.499)   |
+| buyer_trade_experience_years:seller_trade_experience_years |           | 0.137     |
+|                                                            |           | (0.152)   |
+| N                                                          | 2005      | 2005      |
+| AIC                                                        | 19917.1   | 19915.9   |
+| BIC                                                        | 19939.5   | 19938.3   |
+
+
+=== Outcome: quantity | HC3 Robust SE ===
+| Y = quantity                                               | (1)      | (2)      |
+|------------------------------------------------------------|----------|----------|
+| Intercept                                                  | 1.329*** | 1.330*** |
+|                                                            | (0.021)  | (0.020)  |
+| buyer_experienced                                          | 0.119    |          |
+|                                                            | (0.065)  |          |
+| seller_experienced                                         | -0.049   |          |
+|                                                            | (0.051)  |          |
+| buyer_experienced:seller_experienced                       | 0.151    |          |
+|                                                            | (0.192)  |          |
+| buyer_trade_experience_years                               |          | 0.025    |
+|                                                            |          | (0.013)  |
+| seller_trade_experience_years                              |          | -0.002   |
+|                                                            |          | (0.010)  |
+| buyer_trade_experience_years:seller_trade_experience_years |          | 0.000    |
+|                                                            |          | (0.005)  |
+| N                                                          | 2005     | 2005     |
+| AIC                                                        | 5015.6   | 5020.2   |
+| BIC                                                        | 5038.1   | 5042.6   |
+
+
+=== Outcome: quantity | Clustered SE (by cluster_round) ===
+| Y = quantity                                               | (1)      | (2)      |
+|------------------------------------------------------------|----------|----------|
+| Intercept                                                  | 1.329*** | 1.330*** |
+|                                                            | (0.026)  | (0.025)  |
+| buyer_experienced                                          | 0.119    |          |
+|                                                            | (0.068)  |          |
+| seller_experienced                                         | -0.049   |          |
+|                                                            | (0.062)  |          |
+| buyer_experienced:seller_experienced                       | 0.151    |          |
+|                                                            | (0.113)  |          |
+| buyer_trade_experience_years                               |          | 0.025    |
+|                                                            |          | (0.015)  |
+| seller_trade_experience_years                              |          | -0.002   |
+|                                                            |          | (0.010)  |
+| buyer_trade_experience_years:seller_trade_experience_years |          | 0.000    |
+|                                                            |          | (0.003)  |
+| N                                                          | 2005     | 2005     |
+| AIC                                                        | 5015.6   | 5020.2   |
+| BIC                                                        | 5038.1   | 5042.6   |
+
+
+Standard errors in parentheses.
+* p<.05, ** p<.01, *** p<.001.
+

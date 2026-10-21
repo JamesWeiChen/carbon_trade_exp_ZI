@@ -1,0 +1,127 @@
+=== Outcome: seller_unsold_surplus | HC3 Robust SE ===
+Y = seller_unsold_surplus       (1)      (2)      (3)
+           Intercept  1.361***    1.113    0.580
+                       (0.362)  (0.936)  (1.032)
+emission_experienced    -0.361   -0.237   -0.097
+                       (0.417)  (0.403)  (0.507)
+ theoretical_surplus              0.445    0.553
+                                (0.483)  (0.559)
+               first            1.030**   0.935*
+                                (0.389)  (0.389)
+             round_c            -0.199*  -0.210*
+                                (0.081)  (0.089)
+        eq_price_low             -0.576   -0.698
+                                (0.527)  (0.532)
+       eq_price_high              0.000   -0.000
+                                (0.000)  (0.000)
+     work_experience                      -0.032
+                                         (0.037)
+            ind_risk                       0.191
+                                         (0.164)
+performance_pressure                       0.145
+                                         (0.190)
+          econ_or_bz                      -0.174
+                                         (0.414)
+                 env                      -0.734
+                                         (0.587)
+                   N       119      119      119
+                 AIC     500.6    491.9    492.9
+                 BIC     506.2    508.5    523.5
+
+
+=== Outcome: seller_unsold_surplus | Clustered SE (by participant_code) ===
+Y = seller_unsold_surplus      (1)      (2)      (3)
+           Intercept  1.361**    1.113    0.580
+                      (0.486)  (0.894)  (1.074)
+emission_experienced   -0.361   -0.237   -0.097
+                      (0.548)  (0.499)  (0.575)
+ theoretical_surplus             0.445    0.553
+                               (0.440)  (0.508)
+               first            1.030*   0.935*
+                               (0.452)  (0.420)
+             round_c           -0.199*  -0.210*
+                               (0.079)  (0.086)
+        eq_price_low            -0.576   -0.698
+                               (0.416)  (0.454)
+       eq_price_high             0.000   -0.000
+                               (0.000)  (0.000)
+     work_experience                     -0.032
+                                        (0.039)
+            ind_risk                      0.191
+                                        (0.185)
+performance_pressure                      0.145
+                                        (0.207)
+          econ_or_bz                     -0.174
+                                        (0.458)
+                 env                     -0.734
+                                        (0.648)
+                   N      119      119      119
+                 AIC    500.6    491.9    492.9
+                 BIC    506.2    508.5    523.5
+
+
+=== Outcome: seller_target_completion_rate | HC3 Robust SE ===
+Y = seller_target_completion_rate       (1)      (2)      (3)
+           Intercept  0.472***    0.306    0.602
+                       (0.083)  (0.193)  (0.314)
+emission_experienced     0.130    0.121    0.122
+                       (0.099)  (0.096)  (0.107)
+ theoretical_surplus              0.115    0.121
+                                (0.098)  (0.103)
+               first            -0.238*  -0.228*
+                                (0.095)  (0.100)
+             round_c              0.046   0.058*
+                                (0.024)  (0.026)
+        eq_price_low              0.045    0.083
+                                (0.128)  (0.125)
+       eq_price_high              0.000   -0.000
+                                (0.000)  (0.000)
+     work_experience                       0.015
+                                         (0.013)
+            ind_risk                      -0.029
+                                         (0.061)
+performance_pressure                     -0.091*
+                                         (0.045)
+          econ_or_bz                      -0.028
+                                         (0.097)
+                 env                      -0.012
+                                         (0.117)
+                   N       119      119      119
+                 AIC     168.9    162.8    165.6
+                 BIC     174.5    179.5    196.2
+
+
+=== Outcome: seller_target_completion_rate | Clustered SE (by participant_code) ===
+Y = seller_target_completion_rate       (1)      (2)      (3)
+           Intercept  0.472***    0.306    0.602
+                       (0.109)  (0.202)  (0.331)
+emission_experienced     0.130    0.121    0.122
+                       (0.127)  (0.116)  (0.124)
+ theoretical_surplus              0.115    0.121
+                                (0.088)  (0.089)
+               first            -0.238*  -0.228*
+                                (0.114)  (0.115)
+             round_c             0.046*   0.058*
+                                (0.021)  (0.023)
+        eq_price_low              0.045    0.083
+                                (0.121)  (0.121)
+       eq_price_high              0.000   -0.000
+                                (0.000)  (0.000)
+     work_experience                       0.015
+                                         (0.012)
+            ind_risk                      -0.029
+                                         (0.066)
+performance_pressure                      -0.091
+                                         (0.052)
+          econ_or_bz                      -0.028
+                                         (0.114)
+                 env                      -0.012
+                                         (0.129)
+                   N       119      119      119
+                 AIC     168.9    162.8    165.6
+                 BIC     174.5    179.5    196.2
+
+
+Standard errors in parentheses.
+* p<.05, ** p<.01, *** p<.001.
+
