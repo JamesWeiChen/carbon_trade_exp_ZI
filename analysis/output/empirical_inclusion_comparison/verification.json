@@ -1,0 +1,176 @@
+{
+  "baseline_commit": "b06cfb712817fae45e4e14a965a28f520a14204c",
+  "source_sha256": "2513982cc6692888ad9ef119ffb4cc2d9c61643b7aa374b4372013b4cc8a990e",
+  "unchanged_input_and_zi_sha256": {
+    "analysis/input/trades_panel.csv": "b7fe276e9558d36bbc4e3ad00b59afed657194b244e45b265ce2449ad7dddde1",
+    "analysis/input/subj_lv_panel.csv": "18491df49c9fcc7bf485dd5db8fe2e8a2a950c45a0497d4fe91f1a433d20ed17",
+    "analysis/input/group_lv_panel.csv": "826fb9e34d8d245a95d802bfbe57bd48f8e0d6fe550b3960fde83cd99ad34c41",
+    "analysis/output/figure2_zi_simultaneous_two_sided_resale/figure_2_zi_final_player_audit.csv": "3bcaa0d9097c17a7dfc191b38d83e0a0505b0ce3ad13ee56a687cd0cf3122515",
+    "analysis/output/figure2_zi_simultaneous_two_sided_resale/figure_2_zi_marginal_schedules.csv": "1ca3df9be538ea65ee5f50074c1b9962ac011ff6ac5bc1c437fdf6299330b170",
+    "analysis/output/figure2_zi_simultaneous_two_sided_resale/figure_2_zi_market_pool.csv": "0b3cc3e3387f9e6cb9050eb0f7c6c1af00f9bb66b6a4f115791e75f81392f0ff",
+    "analysis/output/figure2_zi_simultaneous_two_sided_resale/figure_2_zi_player_values.csv": "f0bc987bae39c298e8a2a8edd4afa76e5df331d4015b3d578e1cc377daadd56c",
+    "analysis/output/figure2_zi_simultaneous_two_sided_resale/figure_2_zi_simulation_benchmark.csv": "029fa3d4b7ef0d3d4a29bd20f17160ba81e15e7f3e66cb43e241eb8eeb250378",
+    "analysis/output/figure2_zi_simultaneous_two_sided_resale/figure_2_zi_stop_reason_counts.csv": "6221a5424e3a1b3eb4b48b5b8f3b1784a2dcde85d8d62f1341599975d3a6435f",
+    "analysis/output/figure2_zi_simultaneous_two_sided_resale/figure_2_zi_trade_audit.csv": "989461ec16660dc15f93e79e459caca512338632e10393bcc44bd05cf7ce81e3"
+  },
+  "environment": {
+    "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:52:34) [Clang 18.1.8 ]",
+    "numpy": "2.3.1",
+    "pandas": "2.3.0",
+    "scipy": "1.15.2",
+    "matplotlib": "3.10.3"
+  },
+  "changed_functions": [
+    "main",
+    "reconstruct_one_market",
+    "write_validation_report"
+  ],
+  "zi_reused": 10000,
+  "zi_provenance_spot_checks": [
+    1,
+    2,
+    3
+  ],
+  "zi_not_replaced": true,
+  "markets": 48,
+  "packages": 705,
+  "units": 988,
+  "buyer_units_before": 793,
+  "buyer_units_after": 988,
+  "seller_units_before": 803,
+  "seller_units_after": 988,
+  "unchanged_price_pairs": true,
+  "unchanged_price_rhos": true,
+  "unchanged_price_ols": true,
+  "unchanged_zi_and_theory": true,
+  "independent_value_and_rank_oracle_pass": true,
+  "old_exports_reproduced": true,
+  "panel_c_pixel_identical": [
+    "figure_2abcd_package_standardized_price_change.png",
+    "figure_2abcd_package_raw_price_change.png",
+    "figure_2abcd_unit_standardized_price_change.png",
+    "figure_2abcd_unit_raw_price_change.png"
+  ],
+  "rho_summary": [
+    {
+      "measure": "rho_buyer_package",
+      "finite_before": 47,
+      "finite_after": 48,
+      "finite_to_undefined": 0,
+      "undefined_to_finite": 1,
+      "changed_finite": 41,
+      "common_market_mean_delta": 0.21222314953532714,
+      "max_absolute_delta": 0.9142857142857141
+    },
+    {
+      "measure": "rho_seller_package",
+      "finite_before": 48,
+      "finite_after": 48,
+      "finite_to_undefined": 0,
+      "undefined_to_finite": 0,
+      "changed_finite": 41,
+      "common_market_mean_delta": -0.1730511860114381,
+      "max_absolute_delta": 0.8871400159872482
+    },
+    {
+      "measure": "rho_buyer_unit",
+      "finite_before": 47,
+      "finite_after": 48,
+      "finite_to_undefined": 0,
+      "undefined_to_finite": 1,
+      "changed_finite": 41,
+      "common_market_mean_delta": 0.18652648918120532,
+      "max_absolute_delta": 0.8232375078297557
+    },
+    {
+      "measure": "rho_seller_unit",
+      "finite_before": 48,
+      "finite_after": 48,
+      "finite_to_undefined": 0,
+      "undefined_to_finite": 0,
+      "changed_finite": 44,
+      "common_market_mean_delta": -0.1499396712711735,
+      "max_absolute_delta": 0.6906353581680371
+    }
+  ],
+  "plotted_means": [
+    {
+      "observation_level": "package",
+      "measure": "rho_buyer_package",
+      "n_before": 47,
+      "n_after": 48,
+      "entered": 1,
+      "exited": 0,
+      "mean_before": -0.10590813015712415,
+      "mean_after": 0.11484362218349757,
+      "common_n": 47,
+      "common_before": -0.10590813015712415,
+      "common_after": 0.10631501937820295
+    },
+    {
+      "observation_level": "package",
+      "measure": "rho_seller_package",
+      "n_before": 47,
+      "n_after": 48,
+      "entered": 1,
+      "exited": 0,
+      "mean_before": 0.19265648793199455,
+      "mean_after": 0.02355951039433297,
+      "common_n": 47,
+      "common_before": 0.19265648793199455,
+      "common_after": 0.021031179080429518
+    },
+    {
+      "observation_level": "package",
+      "measure": "rho_price_package_raw",
+      "n_before": 47,
+      "n_after": 48,
+      "entered": 1,
+      "exited": 0,
+      "mean_before": -0.44048755680337426,
+      "mean_after": -0.44938591361584646,
+      "common_n": 47,
+      "common_before": -0.44048755680337426,
+      "common_after": -0.44048755680337426
+    },
+    {
+      "observation_level": "unit",
+      "measure": "rho_buyer_unit",
+      "n_before": 47,
+      "n_after": 48,
+      "entered": 1,
+      "exited": 0,
+      "mean_before": -0.10383576565250775,
+      "mean_after": 0.09096924195313316,
+      "common_n": 47,
+      "common_before": -0.10383576565250775,
+      "common_after": 0.08269072352869761
+    },
+    {
+      "observation_level": "unit",
+      "measure": "rho_seller_unit",
+      "n_before": 47,
+      "n_after": 48,
+      "entered": 1,
+      "exited": 0,
+      "mean_before": 0.167715433740011,
+      "mean_after": 0.02124151622520791,
+      "common_n": 47,
+      "common_before": 0.167715433740011,
+      "common_after": 0.01894086004984197
+    },
+    {
+      "observation_level": "unit",
+      "measure": "rho_price_unit_raw",
+      "n_before": 47,
+      "n_after": 48,
+      "entered": 1,
+      "exited": 0,
+      "mean_before": -0.29276442225846455,
+      "mean_after": -0.30265452925694075,
+      "common_n": 47,
+      "common_before": -0.29276442225846455,
+      "common_after": -0.29276442225846455
+    }
+  ]
+}

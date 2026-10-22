@@ -1,0 +1,67 @@
+CTAT Figure 2 validation
+============================================================
+Markets: 48; packages: 705; units: 988
+Reconstructed final holdings match: True
+Rounds 1-6; markets with at least 4 packages. No zero changes removed.
+Unit price sequence repeats every executed price by its quantity.
+Value/cost unit ranks tie within simultaneous packages; price sequence expands every unit.
+Raw/standardized panels c share the standardized [-4,4] display filter within each level.
+Panel d uses level-specific market price correlations and common complete cases.
+Red diamond: unweighted mean of retained market-period correlations.
+MA/AN: original analytical reference, not CTAT estimation or simulation.
+Removed old greedy surplus matching: it is not a solution of MA or AN.
+MA: rho_buyer=-1, rho_seller=1, rho_price=0 under source assumptions.
+AN: rho_buyer=-1, rho_seller=1, rho_price>0; 0 is a graphical endpoint only.
+Source: Lin (2020), Supplement B.3 pp26-27 and OSF utils.R plot.theory.comp.
+https://osf.io/9mfws/ ; Wilson (1987); Friedman (1991).
+AN original implementation recipe: Friedman (1991), pp58-62, section4 PA1-4,
+equations (3)-(6), section5, and Appendix1:
+  1. Initialize risk-neutral agents, private values/costs and deadline T.
+  2. Specify remaining quote opportunities and prior bid/ask distributions.
+  3. Update posteriors after eligible quotes and acceptances (censored data).
+  4. Solve optimal-stopping reservation prices with terminal value=cost/value.
+  5. Accept a feasible standing offer; otherwise improve one's quote when optimal.
+  6. If no immediate action is optimal, advance time to the next action.
+Author-hosted PDF linked from https://leeps.ucsc.edu/papers/:
+https://drive.google.com/file/d/1MB26qwnZKY4JqR3SvYBsQQcfPwAtxlXc/view
+A CTAT AN implementation needs quote/acceptance logs, timing/rules, prior
+parameters, and an explicit multi-unit/role-switching extension. Trades alone
+do not identify this process. This script does not pretend to fit that model.
+MA mechanism (Lin B.3 summary of Wilson): specify common type distribution;
+solve sequential equilibrium with beliefs/strategies; waiting creates missed-
+trade risk; an offer improves until accepted. Greedy matching is not that solution.
+Original ordering restrictions require risk neutrality and symmetry.
+CTAT role switching, endogenous permit values and bundle complementarity differ.
+Expanded-package zero changes can also change theoretical price autocorrelation:
+the displayed source restrictions are references, not newly derived unit-level predictions.
+ZI-C mode: simultaneous_two_sided_resale; attempts: 10000.
+ZI-C complete-rho draws: 8286.
+ZI samples ALL session x round_raw 1-6 settings, not the empirical retained sample.
+Exactly requested attempts; undefined correlations are retained and never resampled.
+No maximum quote events, no period timeout, no consecutive-failure cutoff.
+Each activation selects one participant; that participant submits both feasible sides.
+Every bid/ask is for one permit. A participant may buy and sell as holdings change.
+Bid: 0 <= bid < min(current next-unit value,cash).
+Ask: current last-unit value < ask <= 1000. Cash starts at 1000 and is updated.
+Only best bid and best ask live; ignored worse quotes do not alter draw intervals.
+Equal same-side quotes retain the earlier standing order.
+Incoming quotes compare only with pre-activation standing quotes; no self trade.
+Execution uses the pre-existing opposite quote and clears both book sides.
+If both simultaneous sides cross, both execute atomically from one pre-event state.
+Each dual-cross leg uses its own pre-existing opposite quote; then both book sides clear.
+Dual-cross CSV ordering is bid leg then ask leg for audit only; settlement is simultaneous.
+Acquired permit tokens may be resold; every transfer is recorded in the trade audit.
+Current buy value is marginal unit h+1; current sell value is marginal unit h.
+Descending average-permit values define the induced holding frontier.
+The DP allocation is an audit target only; it never restricts bid/ask direction.
+Average induced-unit no-loss is not guaranteed no-loss in integer production profits.
+True physical-frontier gains/costs are exported per trade for checking this difference.
+Equilibrium stop: no distinct-person transfer can strictly raise induced total value.
+Cash/ask-ceiling blockage is reported separately and is not labelled equilibrium.
+Independent simulations use 8 worker(s); within-market logic is unchanged.
+ZI stop counts: {'induced_value_equilibrium': 10000}
+This v2 mechanism follows the teacher-confirmed CTAT specification; it is not
+presented as a verbatim implementation recovered from Lin's public source code.
+ZI-C simulates one-unit trades only; it has no fitted multi-unit package-size process.
+package: pairs=609, zero changes=82
+permit_unit: pairs=892, zero changes=365

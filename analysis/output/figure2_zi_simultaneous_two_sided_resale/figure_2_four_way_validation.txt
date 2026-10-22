@@ -5,6 +5,8 @@ Reconstructed final holdings match: True
 Rounds 1-6; markets with at least 4 packages. No zero changes removed.
 Unit price sequence repeats every executed price by its quantity.
 Value/cost unit ranks tie within simultaneous packages; price sequence expands every unit.
+Empirical buyer/seller correlations include every executed unit, including buybacks and resales, matching ZI.
+Values/costs use current holding ordinals, not historical purchase prices.
 Raw/standardized panels c share the standardized [-4,4] display filter within each level.
 Panel d uses level-specific market price correlations and common complete cases.
 Red diamond: unweighted mean of retained market-period correlations.

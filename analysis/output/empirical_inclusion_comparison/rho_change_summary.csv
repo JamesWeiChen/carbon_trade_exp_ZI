@@ -1,0 +1,5 @@
+measure,finite_before,finite_after,finite_to_undefined,undefined_to_finite,changed_finite,common_market_mean_delta,max_absolute_delta
+rho_buyer_package,47,48,0,1,41,0.21222314953532714,0.9142857142857141
+rho_seller_package,48,48,0,0,41,-0.1730511860114381,0.8871400159872482
+rho_buyer_unit,47,48,0,1,41,0.18652648918120532,0.8232375078297557
+rho_seller_unit,48,48,0,0,44,-0.1499396712711735,0.6906353581680371

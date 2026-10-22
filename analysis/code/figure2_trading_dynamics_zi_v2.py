@@ -346,16 +346,10 @@ def reconstruct_one_market(
 ) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, dict[str, Any]]:
     """Reconstruct package-level and permit-unit-level transaction data.
 
-    Supply-side eligibility:
-      seller cost is retained only when the sold permit ordinal was part of the
-      seller's initial endowment (ordinal <= initial permits).
-
-    Demand-side eligibility:
-      buyer value is retained only when the purchased permit ordinal was outside
-      the buyer's initial endowment (ordinal > initial permits).
-
-    Holdings are still updated through every actual trade, including excluded
-    observations, so later permit ordinals are reconstructed correctly.
+    Every executed permit enters both sides' correlations, including buybacks
+    and resales, matching the ZI observation rule. Values and opportunity costs
+    use the current holding ordinal, never the historical purchase price.
+    Holdings are updated unit by unit through every actual transaction.
     """
     ordered_subjects = subject_rows.sort_values("id_in_group").copy()
 
@@ -438,14 +432,13 @@ def reconstruct_one_market(
             buyer_value_raw = float(marginal_schedules[buyer_id][buyer_ordinal])
             seller_cost_raw = float(marginal_schedules[seller_id][seller_ordinal])
 
-            # Requested induced-value/cost analogue:
-            # - buyers: only units NOT initially held
-            # - sellers: only units initially held
-            buyer_eligible = buyer_ordinal > initial_holdings[buyer_id]
-            seller_eligible = seller_ordinal <= initial_holdings[seller_id]
+            # Match ZI: include every purchase and sale, regardless of initial
+            # endowment. Keep the eligibility columns for audit compatibility.
+            buyer_eligible = True
+            seller_eligible = True
 
-            buyer_value = buyer_value_raw if buyer_eligible else np.nan
-            seller_cost = seller_cost_raw if seller_eligible else np.nan
+            buyer_value = buyer_value_raw
+            seller_cost = seller_cost_raw
 
             buyer_unit_values.append(buyer_value)
             seller_unit_costs.append(seller_cost)
@@ -505,9 +498,8 @@ def reconstruct_one_market(
                 "eq_price": float(trade["eq_price"]),
                 "buyer_holding_before_package": buyer_h_before,
                 "seller_holding_before_package": seller_h_before,
-                # Average ONLY the eligible unit values/costs in the package.
-                # A package with no eligible unit on one side receives NaN for
-                # that side and is automatically omitted from that Spearman rho.
+                # Average all current-holding unit values/costs in the package,
+                # including repurchased or resold permits.
                 "buyer_permit_value_avg": finite_mean(buyer_unit_values),
                 "seller_permit_cost_avg": finite_mean(seller_unit_costs),
                 "buyer_permit_value_total": finite_sum(buyer_unit_values),
@@ -2145,6 +2137,8 @@ def write_validation_report(market_panel, package_panel, unit_panel,
         "Rounds 1-6; markets with at least 4 packages. No zero changes removed.",
         "Unit price sequence repeats every executed price by its quantity.",
         "Value/cost unit ranks tie within simultaneous packages; price sequence expands every unit.",
+        "Empirical buyer/seller correlations include every executed unit, including buybacks and resales, matching ZI.",
+        "Values/costs use current holding ordinals, not historical purchase prices.",
         "Raw/standardized panels c share the standardized [-4,4] display filter within each level.",
         "Panel d uses level-specific market price correlations and common complete cases.",
         "Red diamond: unweighted mean of retained market-period correlations.",
@@ -2313,7 +2307,7 @@ def main() -> None:
     print("[CHECK] Figure 2c is exported with and without the eq_price denominator.")
     print("[CHECK] Both 2c modes use the same paper-rule sample and 100 hex bins.")
     print("[CHECK] Package and permit-unit versions are both exported.")
-    print("[CHECK] a-b restrict seller costs to initial units and buyer values to non-initial units.")
+    print("[CHECK] a-b include all purchases and sales, including buybacks and resales, matching ZI.")
     print("[CHECK] Dividing by eq_price does not alter within-market rho_price in panel d.")
     print(f"[CHECK] ZI version: {ZI_ROLE_MODE}; exactly {ZI_SIMULATIONS:,} market attempts.")
     print(f"[CHECK] Complete draws for ellipse: {int(zi_simulations.valid_for_95_region.sum()):,}.")
